@@ -18,7 +18,7 @@ try {
                                     tenantIdVariable: 'TENANT_ID')]) 
         {
           ansiColor('xterm') {
-           terraform init
+           sh 'terraform init'
           }
         }
     }
@@ -34,7 +34,7 @@ try {
                                     clientSecretVariable: 'CLIENT_SECRET',
                                     tenantIdVariable: 'TENANT_ID')]) 
         {
-            'terraform plan -var azure_client_id=${CLIENT_ID} -var azure_client_secret=${CLIENT_SECRET} -out=plan.out'
+           sh 'terraform plan -var azure_client_id=${CLIENT_ID} -var azure_client_secret=${CLIENT_SECRET} -out=plan.out'
           }
     }
   }
