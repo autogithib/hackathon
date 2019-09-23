@@ -18,7 +18,7 @@ try {
                                     tenantIdVariable: 'TENANT_ID')]) 
         {
           ansiColor('xterm') {
-           sh 'terraform init'
+           'terraform init'
           }
         }
     }
